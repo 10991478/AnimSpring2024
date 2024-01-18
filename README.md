@@ -10,3 +10,8 @@ Robot Arm:
     - Decided to change the attachment position of the upper palm to increase thumb range of movement
       - It used to attach on the sides, now attaches in back
     - The joints bend and swivel points are separate from eachother
+  - UV mapping & texturing phase updates:
+    - Biggest issue was with the palm of the model that I had used a bool for and then retopo-ed
+      - Found that there was some messed up geometry going on and had to fix it
+    - Mostly it went well. I modeled in such a way that there were easy seams throughout the whole model
+    - Textured in substance painter and that went well. Used some nice smart materials
