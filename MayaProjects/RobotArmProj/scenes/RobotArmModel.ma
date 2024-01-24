@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: RobotArmModel.ma
-//Last modified: Tue, Jan 23, 2024 08:24:34 PM
+//Last modified: Tue, Jan 23, 2024 08:25:57 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "21FDEF2A-4F08-F83B-C01A-1DB38D976A4B";
+fileInfo "UUID" "4A2A85C4-47EA-2D2C-C082-D5978FF56E63";
 createNode transform -s -n "persp";
 	rename -uid "761C3BFE-4B8A-AC54-321E-EF95F8C0925A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -27.411385860159562 31.921707709642178 -47.75044861587353 ;
-	setAttr ".r" -type "double3" -17.738353502466463 -7344.1999999996679 0 ;
+	setAttr ".t" -type "double3" -37.032159286443367 30.110009996278343 37.413133062148582 ;
+	setAttr ".r" -type "double3" -15.938353502469537 -7248.1999999995714 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A53F8B06-4513-2E10-EC17-E6BC1C7DA535";
 	setAttr -k off ".v" no;
@@ -21267,7 +21267,7 @@ createNode groupId -n "groupId147";
 	rename -uid "E232C409-4DB8-C514-2490-30B70EEB2660";
 	setAttr ".ihi" 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "FE5E6F86-4E2C-87AF-D34B-04A8834996E2";
+	rename -uid "07F18623-4DB9-836B-A396-A3A8DB2CEF06";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
