@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: RobotArmModel.ma
-//Last modified: Tue, Jan 30, 2024 06:33:08 PM
+//Last modified: Tue, Jan 30, 2024 06:33:46 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "682332CE-450C-E151-7FE9-FA8CA223B119";
+fileInfo "UUID" "8262DEE8-45F1-E7F6-571F-42A52F672ED8";
 createNode transform -s -n "persp";
 	rename -uid "761C3BFE-4B8A-AC54-321E-EF95F8C0925A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -80.909170555771553 17.340408773409877 34.56238639476679 ;
-	setAttr ".r" -type "double3" -5.7383535233196561 -7623.7999999892427 -1.8009697154287579e-15 ;
+	setAttr ".t" -type "double3" -36.05574137278488 29.077586791730564 46.630862356221989 ;
+	setAttr ".r" -type "double3" -19.538353523318335 -7600.5999999892674 -1.047239191784077e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A53F8B06-4513-2E10-EC17-E6BC1C7DA535";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 25.545956075368988;
-	setAttr ".coi" 96.5847407065651;
+	setAttr ".coi" 70.964307363050153;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -20609,7 +20609,7 @@ createNode poseInterpolatorManager -n "poseInterpolatorManager";
 	rename -uid "02B351CB-4322-B489-192F-6D9AA8A0A99F";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "D8AAC837-43D5-843E-0D2A-CEB800969C01";
-	setAttr ".cdl" 1;
+	setAttr ".cdl" 2;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
@@ -21089,6 +21089,7 @@ createNode displayLayer -n "Controls_Layer";
 	setAttr ".do" 1;
 createNode displayLayer -n "Skeleton_Layer";
 	rename -uid "80CB3A9D-4ACF-E034-6B73-7BB747663049";
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "Geometry_Layer";
@@ -21144,7 +21145,7 @@ createNode animCurveUU -n "Swing_Joint_2_Ctrl_parentConstraint1_COG_CtrlW0";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 1 1;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0D94FC13-4F97-F02A-D90C-6083D61C08F3";
+	rename -uid "D4FDAD71-4539-FFD1-89D6-9981AB66FB68";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
