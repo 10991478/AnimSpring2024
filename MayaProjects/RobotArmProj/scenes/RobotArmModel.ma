@@ -79,6 +79,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "RobotArm";
 	rename -uid "013063D0-4A43-E887-7353-8C8FFDFC4EF7";
+	setAttr ".v" no;
 createNode transform -n "Geometry" -p "RobotArm";
 	rename -uid "FD81D35D-41D7-6D25-F488-D987E149843F";
 createNode transform -n "Base_Plate_Geo" -p "Geometry";
@@ -21466,6 +21467,118 @@ createNode nurbsCurve -n "Base_Switch_CtrlShape" -p "Base_Switch_Ctrl";
 		0 5.2807506297305018 -13.005464096929471
 		0 4.9060222590757609 -13.769532928947765
 		0 3.8354052578776177 -13.073644298404348
+		;
+createNode joint -n "Arm_01_IK_Jnt";
+	rename -uid "A5D52490-4153-3353-0AE7-60BF15EE56C0";
+	setAttr ".t" -type "double3" 1.4901166522918174e-08 12.430540084838867 0 ;
+	setAttr ".r" -type "double3" 8.5377364625159387e-07 2.1758800027847975e-15 1.5052628495370696e-20 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jo" -type "double3" 90 0 90.000000260470884 ;
+	setAttr ".pa" -type "double3" 0 0 -90 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "Arm_02_IK_Jnt" -p "Arm_01_IK_Jnt";
+	rename -uid "804085D3-4FF7-DF7E-641D-B18CFD9077CE";
+	setAttr ".t" -type "double3" 6.5556163787841761 0 -1.0981629860657629e-15 ;
+	setAttr ".r" -type "double3" 2.1817601350460795e-29 -3.4609603776978734e-13 3.8931887301899872e-07 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".pa" -type "double3" 0 0 90 ;
+	setAttr ".radi" 0.5;
+createNode joint -n "Arm_03_IK_Jnt" -p "Arm_02_IK_Jnt";
+	rename -uid "FF55E418-4710-73C7-5B65-5A98D25DF052";
+	setAttr ".t" -type "double3" 3.9345016479492232 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".radi" 0.5;
+createNode ikEffector -n "effector1" -p "Arm_02_IK_Jnt";
+	rename -uid "31BC7C0D-4F3E-C03C-0F2F-A5A71DA68412";
+	setAttr ".v" no;
+	setAttr ".hd" yes;
+createNode transform -n "Arm_IK_Handle_Ctrl_Grp";
+	rename -uid "87C046BB-43D5-D2F7-E18D-E8A0416F8171";
+	setAttr ".t" -type "double3" 0 22.920658111572266 0 ;
+createNode transform -n "Arm_IK_Handle_Ctrl" -p "Arm_IK_Handle_Ctrl_Grp";
+	rename -uid "02B3F9AE-48D3-9C3B-0AED-0A91DDFB3B5F";
+createNode nurbsCurve -n "Arm_IK_Handle_CtrlShape" -p "Arm_IK_Handle_Ctrl";
+	rename -uid "3A89B3BD-4D01-4425-14D5-5A8F38845E86";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.8748706356247387 1.1480271613666001e-16 -1.8748706356247389
+		1.6235555815773307e-16 1.6235555815773307e-16 -2.6514674805955698
+		-1.8748706356247387 1.1480271613665998e-16 -1.8748706356247382
+		-2.6514674805955707 8.4165408047400101e-33 -1.3745254240814467e-16
+		-1.8748706356247387 -1.1480271613665998e-16 1.8748706356247387
+		-2.6559931095290191e-16 -1.6235555815773317e-16 2.6514674805955711
+		1.8748706356247387 -1.1480271613665998e-16 1.8748706356247382
+		2.6514674805955707 -2.2140370141822334e-32 3.6157968415444066e-16
+		1.8748706356247387 1.1480271613666001e-16 -1.8748706356247389
+		1.6235555815773307e-16 1.6235555815773307e-16 -2.6514674805955698
+		-1.8748706356247387 1.1480271613665998e-16 -1.8748706356247382
+		;
+createNode ikHandle -n "Arm_IK_Handle" -p "Arm_IK_Handle_Ctrl";
+	rename -uid "5023417D-42E5-AEB0-AE8A-78BB98F9FF22";
+	setAttr ".t" -type "double3" -3.2787693979767332e-08 0 0 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "Arm_IK_Handle_poleVectorConstraint1" -p "Arm_IK_Handle";
+	rename -uid "A05CC5EF-4AD4-EA80-FC2B-7CBC91D111D9";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Arm_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -2.9802322387695312e-08 6.5556163787841761 -15 ;
+	setAttr -k on ".w0";
+createNode transform -n "Arm_IK_PV_Ctrl_Grp";
+	rename -uid "EF9BAA82-4FB8-89BD-8242-0CB9765B3F1C";
+	setAttr ".t" -type "double3" -1.4901155864777138e-08 18.986156463623043 0 ;
+	setAttr ".r" -type "double3" 90 0 90.000000260470884 ;
+createNode transform -n "Arm_IK_PV_Ctrl_Offset_Grp" -p "Arm_IK_PV_Ctrl_Grp";
+	rename -uid "1BEEB41E-4136-DC5C-5ED9-C0AD07D35AD5";
+	setAttr ".t" -type "double3" 0 -15 0 ;
+createNode transform -n "Arm_IK_PV_Ctrl" -p "Arm_IK_PV_Ctrl_Offset_Grp";
+	rename -uid "3EFDE13F-4CF6-9D56-1B13-399FBE42B683";
+createNode nurbsCurve -n "Arm_IK_PV_CtrlShape" -p "Arm_IK_PV_Ctrl";
+	rename -uid "79FFCF63-4369-E36E-0914-31B592A06C79";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 16 2 no 3
+		21 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+		19
+		0.87359164569433834 1.2914125825964654e-16 -2.1090367990111059
+		7.0068906968986143e-16 1.6132043325147999e-16 -2.6345626079910969
+		-0.87359164569433967 1.2914125825964654e-16 -2.1090367990111059
+		-0.59660231976117417 3.6531356062970381e-17 -0.59660231976117417
+		-2.1090367990111063 5.3492060633072068e-17 -0.87359164569433945
+		-2.6345626079910978 -7.4413220893916089e-33 1.2152601214607423e-16
+		-2.1090367990111054 -5.3492060633072081e-17 0.87359164569433956
+		-0.59660231976117417 -3.6531356062970393e-17 0.59660231976117473
+		-0.87359164569433934 -1.2914125825964656e-16 2.1090367990111063
+		2.752170951468216e-16 -1.6132043325147999e-16 2.6345626079910969
+		0.87359164569434 -1.2914125825964654e-16 2.1090367990111059
+		0.59660231976117417 -3.6531356062970368e-17 0.59660231976117362
+		2.1090367990111067 -5.3492060633072044e-17 0.87359164569433889
+		2.6345626079910964 2.7714044839680966e-32 -4.5260469972201916e-16
+		2.1090367990111063 5.3492060633072124e-17 -0.87359164569434034
+		0.59660231976117362 3.6531356062970381e-17 -0.59660231976117439
+		0.87359164569433834 1.2914125825964654e-16 -2.1090367990111059
+		7.0068906968986143e-16 1.6132043325147999e-16 -2.6345626079910969
+		-0.87359164569433967 1.2914125825964654e-16 -2.1090367990111059
 		;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "7384FE3B-409F-A9CE-1F9D-53A204181379";
