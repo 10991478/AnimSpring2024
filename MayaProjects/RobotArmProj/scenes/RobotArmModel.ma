@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: RobotArmModel.ma
-//Last modified: Tue, Jan 30, 2024 06:31:24 PM
+//Last modified: Tue, Jan 30, 2024 06:33:08 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "2EF3D514-40F6-DA3D-EED2-71AFECE38355";
+fileInfo "UUID" "682332CE-450C-E151-7FE9-FA8CA223B119";
 createNode transform -s -n "persp";
 	rename -uid "761C3BFE-4B8A-AC54-321E-EF95F8C0925A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -60.119112513214944 21.811644232273892 35.828014734156227 ;
-	setAttr ".r" -type "double3" -17.138353523363527 -7620.9999999893244 -6.5604199000389226e-15 ;
+	setAttr ".t" -type "double3" -80.909170555771553 17.340408773409877 34.56238639476679 ;
+	setAttr ".r" -type "double3" -5.7383535233196561 -7623.7999999892427 -1.8009697154287579e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A53F8B06-4513-2E10-EC17-E6BC1C7DA535";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 25.545956075368988;
-	setAttr ".coi" 77.89540783089403;
+	setAttr ".coi" 96.5847407065651;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -19428,12 +19428,6 @@ createNode parentConstraint -n "Swing_Joint_1_Jnt_parentConstraint1" -p "Swing_J
 	setAttr ".rst" -type "double3" -6.9201741372826314e-18 1.9999997615814211 -3.2861427834612033e-23 ;
 	setAttr ".rsrr" -type "double3" 1.2722218725854062e-14 -5.0888874903416268e-14 9.541664044390544e-15 ;
 	setAttr -k on ".w0";
-createNode joint -n "joint1" -p "COG_Jnt";
-	rename -uid "A64FBD52-4BC5-62E6-5A95-8B83632A61EE";
-	setAttr ".t" -type "double3" 36.89319893716695 0 -94.964261537026218 ;
-	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
-	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".radi" 2;
 createNode transform -n "Controls" -p "RobotArm";
 	rename -uid "80698427-4A9E-83C1-2B0E-9FA6EC211ABA";
 createNode transform -n "Transform_Ctrl_Grp" -p "Controls";
@@ -20606,15 +20600,15 @@ createNode nurbsCurve -n "Base_Switch_CtrlShape" -p "Base_Switch_Ctrl";
 		0 3.8354052578776177 -13.073644298404348
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7B6ECA88-40DE-AEC9-1B2C-BE85DEF80400";
+	rename -uid "A3CB5712-4D19-3F6C-1D61-5B8B2453899F";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "090A8A25-432E-02B1-667C-EDB8F0E9BB68";
+	rename -uid "F5322CAA-43C9-258A-3050-6E8CC25EB9B2";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "486F09BB-46CF-0A1C-9242-64A6972C0719";
+	rename -uid "02B351CB-4322-B489-192F-6D9AA8A0A99F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8D6348B2-407D-8EEE-62FA-7C97EAD90C72";
+	rename -uid "D8AAC837-43D5-843E-0D2A-CEB800969C01";
 	setAttr ".cdl" 1;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
@@ -20622,7 +20616,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "3A91BB22-49E8-099A-6C0F-75BF51566172";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F5AEDF55-4039-46A6-BEF6-3FAC0FE6B6E0";
+	rename -uid "218C9DAB-4099-53D5-EFEC-1BB58D66B3A1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "68AB98B3-41BB-8067-8E7E-C79AA1F3AA7F";
 	setAttr ".g" yes;
@@ -21095,7 +21089,6 @@ createNode displayLayer -n "Controls_Layer";
 	setAttr ".do" 1;
 createNode displayLayer -n "Skeleton_Layer";
 	rename -uid "80CB3A9D-4ACF-E034-6B73-7BB747663049";
-	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "Geometry_Layer";
@@ -21151,7 +21144,7 @@ createNode animCurveUU -n "Swing_Joint_2_Ctrl_parentConstraint1_COG_CtrlW0";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 1 1;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "0CD83984-457C-AEA6-F183-E4AB2EC1332D";
+	rename -uid "0D94FC13-4F97-F02A-D90C-6083D61C08F3";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
@@ -21199,8 +21192,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Geometry_Layer.di" "Geometry.do";
 connectAttr "Geometry_Grp_scaleConstraint1.csx" "Geometry.sx";
 connectAttr "Geometry_Grp_scaleConstraint1.csy" "Geometry.sy";
@@ -22654,7 +22645,6 @@ connectAttr "Swing_Joint_1_Ctrl.pm" "Swing_Joint_1_Jnt_parentConstraint1.tg[0].t
 		;
 connectAttr "Swing_Joint_1_Jnt_parentConstraint1.w0" "Swing_Joint_1_Jnt_parentConstraint1.tg[0].tw"
 		;
-connectAttr "COG_Jnt.s" "joint1.is";
 connectAttr "Controls_Layer.di" "Controls.do";
 connectAttr "Base_Swing_Joint_Ctrl_visibility.o" "Base_Swing_Joint_Ctrl.v";
 connectAttr "Swing_Joint_1_CtrlShape_visibility.o" "Swing_Joint_1_CtrlShape.v";
