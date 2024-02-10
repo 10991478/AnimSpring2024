@@ -15,3 +15,10 @@ Robot Arm:
       - Found that there was some messed up geometry going on and had to fix it
     - Mostly it went well. I modeled in such a way that there were easy seams throughout the whole model
     - Textured in substance painter and that went well. Used some nice smart materials
+
+Dolphin Character:
+  - Modeling phase updates:
+    - Modeled in Zbrush and then moved over to Maya
+    - Used Zremesher to get a model into maya to set as live surface
+      - Zremeshed model is very high poly, but much lower poly than the original
+    - Used quad draw to retopo because low poly Zremesher model had too many polys in body and not enough in face
