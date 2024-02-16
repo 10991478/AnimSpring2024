@@ -74,5 +74,8 @@ crashlytics-build.properties
 MayaProjects/RobotArmProj/substance/
 
 MayaProjects/DolphinProj/substance/
+<<<<<<< HEAD
 
 MayaProjects/GoblinProj/sourceimages/
+=======
+>>>>>>> ac4246a (Added the substance textures & ignored their folder)
