@@ -22,3 +22,10 @@ Dolphin Character:
     - Used Zremesher to get a model into maya to set as live surface
       - Zremeshed model is very high poly, but much lower poly than the original
     - Used quad draw to retopo because low poly Zremesher model had too many polys in body and not enough in face
+Human Character:
+  - Design phase updates:
+    - Came up with four different designs for potential characters, all with unique personalities/looks
+    - Further refined each design until I was at a point where I was happy with each of them
+    - Asked for opinions on my designs from many other people to help me decide which one I should do
+    - Ended up deciding on a goblin-looking character because I like the design and it has a lot of potential for expressive animation
+    - Created a character sheet for my chosen design to further explore and define the forms of the character in preparation for 3D modeling
