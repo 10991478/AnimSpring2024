@@ -29,3 +29,7 @@ Human Character:
     - Asked for opinions on my designs from many other people to help me decide which one I should do
     - Ended up deciding on a goblin-looking character because I like the design and it has a lot of potential for expressive animation
     - Created a character sheet for my chosen design to further explore and define the forms of the character in preparation for 3D modeling
+  - Modeling phase updates:
+    - Created detailed model in Zbrush based off of my design sketches
+    - Imported to maya for further changes
+      - In need of better topology
