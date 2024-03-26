@@ -1,10 +1,14 @@
 //Maya ASCII 2024 scene
 //Name: RobotArmModel.ma
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Last modified: Fri, Feb 02, 2024 12:33:25 PM
 =======
 //Last modified: Thu, Feb 01, 2024 12:29:14 PM
 >>>>>>> 9790a30 (A a system figured out for IK - ready to make it real)
+=======
+//Last modified: Fri, Feb 02, 2024 12:33:25 PM
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -16,12 +20,16 @@ fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 fileInfo "UUID" "6EE3941B-4D97-B1FD-C8FC-CAACAD647E57";
 createNode transform -s -n "persp";
 	rename -uid "761C3BFE-4B8A-AC54-321E-EF95F8C0925A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -37.294104458086231 16.892833494588956 0.50565570033698393 ;
 	setAttr ".r" -type "double3" -3.3383535690579969 -8363.3999999349326 -1.7295075159595965e-15 ;
+<<<<<<< HEAD
 =======
 fileInfo "UUID" "EB01C762-47EF-58DC-CC85-FF8852672077";
 createNode transform -s -n "persp";
@@ -30,16 +38,22 @@ createNode transform -s -n "persp";
 	setAttr ".t" -type "double3" -53.525479802162486 24.214251341041674 -14.535889916737815 ;
 	setAttr ".r" -type "double3" -12.93835362219658 -7306.9999999791853 0 ;
 >>>>>>> 9790a30 (A a system figured out for IK - ready to make it real)
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A53F8B06-4513-2E10-EC17-E6BC1C7DA535";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 25.545956075368988;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 	setAttr ".coi" 42.810259123650248;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".tp" -type "double3" 3.7807140162993136e-07 18.898509352073816 3.7206063099261679 ;
+<<<<<<< HEAD
 =======
 	setAttr ".coi" 55.360195018894579;
 	setAttr ".imn" -type "string" "persp";
@@ -47,6 +61,8 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".tp" -type "double3" -2.6683642901172444 18.53707127532363 1.9885062130333915 ;
 >>>>>>> 9790a30 (A a system figured out for IK - ready to make it real)
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "0EDABA13-44F2-47E1-E02B-63AD18F6F98F";
@@ -21463,6 +21479,7 @@ createNode transform -n "Base_Switch_Ctrl" -p "COG_Ctrl";
 	setAttr -l on -k off ".sz";
 	setAttr -k on ".Independent_Base_Switch";
 	setAttr -k on ".IK_Switch" yes;
+<<<<<<< HEAD
 createNode nurbsCurve -n "Base_Switch_CtrlShape" -p "Base_Switch_Ctrl";
 	rename -uid "D7AD14DA-4638-C1FC-82A1-BBB7DA00D6B5";
 	setAttr -k off ".v";
@@ -21676,6 +21693,8 @@ createNode transform -n "Base_Switch_Ctrl" -p "COG_Ctrl";
 	setAttr -l on -k off ".sz";
 	setAttr -k on ".Independent_Base_Switch";
 	setAttr -k on ".IK_Switch" yes;
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 createNode nurbsCurve -n "Base_Switch_CtrlShape" -p "Base_Switch_Ctrl";
 	rename -uid "D7AD14DA-4638-C1FC-82A1-BBB7DA00D6B5";
 	setAttr -k off ".v";
@@ -22241,6 +22260,9 @@ createNode animCurveUU -n "Swing_Joint_2_Ctrl_parentConstraint1_COG_CtrlW0";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 1 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 createNode ikSCsolver -n "ikSCsolver";
 	rename -uid "51D0C2BC-4142-9C33-4B0B-6EAA2FE48578";
 createNode animCurveUU -n "Arm_Joint_1_Geo_parentConstraint1_Arm_Joint_1_JntW0";
@@ -22375,12 +22397,15 @@ createNode animCurveUU -n "Hand_Joint_Jnt_parentConstraint1_Arm_Temp_JntW1";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  0 0 1 1;
 	setAttr -s 2 ".kot[0:1]"  5 5;
+<<<<<<< HEAD
 =======
 createNode ikRPsolver -n "ikRPsolver";
 	rename -uid "CBFB31E9-4670-9CDA-ABBE-05B7B249BEEA";
 createNode ikSCsolver -n "ikSCsolver";
 	rename -uid "51D0C2BC-4142-9C33-4B0B-6EAA2FE48578";
 >>>>>>> 9790a30 (A a system figured out for IK - ready to make it real)
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -24443,6 +24468,7 @@ connectAttr "Swing_Joint_2_Ctrl_parentConstraint1.w0" "Swing_Joint_2_Ctrl_parent
 connectAttr "Swing_Joint_2_Ctrl_parentConstraint1_COG_CtrlW0.o" "Swing_Joint_2_Ctrl_parentConstraint1.w0"
 		;
 <<<<<<< HEAD
+<<<<<<< HEAD
 connectAttr "Arm_IK_Handle_Ctrl_orientConstraint1.crx" "Arm_IK_Handle_Ctrl.rx" -l
 		 on;
 connectAttr "Arm_IK_Handle_Ctrl_orientConstraint1.cry" "Arm_IK_Handle_Ctrl.ry" -l
@@ -24575,6 +24601,8 @@ connectAttr "Arm_IK_Handle_Ctrl.rpt" "Arm_IK_Handle_pointConstraint1.tg[0].trt";
 connectAttr "Arm_IK_Handle_Ctrl.pm" "Arm_IK_Handle_pointConstraint1.tg[0].tpm";
 connectAttr "Arm_IK_Handle_pointConstraint1.w0" "Arm_IK_Handle_pointConstraint1.tg[0].tw"
 		;
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 connectAttr "Arm_IK_Handle_Ctrl_orientConstraint1.crx" "Arm_IK_Handle_Ctrl.rx" -l
 		 on;
 connectAttr "Arm_IK_Handle_Ctrl_orientConstraint1.cry" "Arm_IK_Handle_Ctrl.ry" -l
@@ -25317,8 +25345,11 @@ connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file20.msg" ":defaultTextureList1.tx" -na;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
 >>>>>>> 9790a30 (A a system figured out for IK - ready to make it real)
+=======
+>>>>>>> 90e2874c90cbf79f1eb3e3efcf22f370185d46de
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 // End of RobotArmModel.ma
